@@ -1,0 +1,11 @@
+<!-- About Section -->
+<section id="about" class="container content-section">
+    <!-- <div class="page-header">
+        <h1>{{ .Params.mission }}<small>{{ .Params.mission }}</small></h1>
+    </div> -->
+    {{ range where .Data.Pages "Section" "about" | first 1 }}
+    <div class="row">
+        {{ .Content }}
+    </div>
+    {{ end }}
+</section>

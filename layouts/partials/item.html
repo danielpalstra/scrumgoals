@@ -1,0 +1,24 @@
+<!-- Roadmap of Sprint item -->
+<div class="cd-timeline-block" >
+    <div class="cd-timeline-img roadmap-item {{ if .Params.finished }} roadmap-item-finished {{end}}">
+    </div>
+
+    <div class="cd-timeline-content">
+        <h2 style="display:hidden;">{{ .Title }}</h2>
+        <p>{{ .Summary }}</p>
+        <span class="pull-right"><a href="http://git.k94.kvk.nl/zmm-docs/team-zmm/tree/master/content/{{ .File.Path }}" target="_blank"><i class="glyphicon glyphicon-edit"></i></a></span>
+        {{ if .Truncated }}
+        <a href="{{ .RelPermalink }}">Read more</a>
+        {{ end }}
+        {{ if isset .Params "sprint_start" }}
+          <span class="cd-date">
+            <i class="glyphicon glyphicon-circle-arrow-right"></i> {{ .Params.sprint_start }}
+            <i class="glyphicon glyphicon-flag"></i> {{ .Params.sprint_end }}
+          </span>
+        {{end}}
+        {{ if eq .Type "roadmap" }}
+          <span class="cd-date"><i class="glyphicon glyphicon-flag"></i>{{ .Date.Format "January 2006" }}</span>
+        {{end}}
+
+    </div>
+</div>
