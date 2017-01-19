@@ -1,5 +1,8 @@
-<section id="cd-timeline" class="cd-container">
-  {{ range .Data.Pages.ByDate }}
-  {{ partial "item.html" . }}
-  {{ end }}
-</section>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <section id="cd-timeline" class="cd-container">
+    {{ range .Data.Pages.ByDate }}
+    {{ partial "item.html" . }}
+    {{ end }}
+  </section>
+</div>
