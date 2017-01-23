@@ -25,7 +25,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
   -->
   <link rel="stylesheet" href="/css/skins/skin-blue.min.css">
 	<link rel="stylesheet" href="/css/roadmap.css">
-
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -60,11 +59,11 @@ desired effect
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a href="/" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>ZMM</b></span>
+      <span class="logo-mini"><b>{{ .Site.Params.teamnameshort }}</b></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg">Team <b>ZMM</b></span>
+      <span class="logo-lg">{{ .Site.Params.teamname }}</span>
     </a>
 
     <!-- Header Navbar -->
@@ -92,6 +91,14 @@ desired effect
         <li><a href="/roadmap"><i class="fa fa-map"></i> <span>Roadmap</span></a></li>
 				<li><a href="/sprints"><i class="fa fa-check-circle"></i> <span>Sprint Goals</span></a></li>
         <li><a href="{{ .Site.Params.backlogurl }}" target="_blank"><i class="fa fa-list-ol"></i> <span>Backlog</span></a></li>
+        <li>
+          <a href="#">
+            <i class="fa fa-th"></i> <span>Products</span>
+            <span class="pull-right-container">
+              <small class="label pull-right bg-green">todo</small>
+            </span>
+          </a>
+        </li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>

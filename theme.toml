@@ -16,6 +16,6 @@ min_version = 0.18
 
 # If porting an existing theme
 [original]
-  name = ""
-  homepage = ""
-  repo = ""
+  name = "Admin LTE"
+  homepage = "https://almsaeedstudio.com/themes/AdminLTE/index.html"
+  repo = "https://github.com/almasaeed2010/AdminLTE"
