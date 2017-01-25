@@ -6,7 +6,7 @@
     <div class="cd-timeline-content">
         <h2 style="display:hidden;">{{ .Title }}</h2>
         <p>{{ .Summary }}</p>
-        <span class="pull-right"><a href="http://git.k94.kvk.nl/zmm-docs/team-zmm/tree/master/content/{{ .File.Path }}" target="_blank"><i class="glyphicon glyphicon-edit"></i></a></span>
+        <span class="pull-right"><a href="{{ .Site.Params.gitproject }}/{{ .File.Path }}" target="_blank"><i class="glyphicon glyphicon-edit"></i></a></span>
         {{ if .Truncated }}
         <a href="{{ .RelPermalink }}">Read more</a>
         {{ end }}
