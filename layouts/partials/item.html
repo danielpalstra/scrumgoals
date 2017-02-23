@@ -1,4 +1,4 @@
-<!-- Roadmap of Sprint item -->
+<!-- Roadmap or sprint items -->
 <div class="cd-timeline-block" >
     <div class="cd-timeline-img roadmap-item {{ if .Params.finished }} roadmap-item-finished {{end}}">
     </div>
@@ -17,7 +17,9 @@
           </span>
         {{end}}
         {{ if eq .Type "roadmap" }}
-          <span class="cd-date"><i class="glyphicon glyphicon-flag"></i>{{ .Date.Format "January 2006" }}</span>
+          <span class="cd-date">
+            <i class="glyphicon glyphicon-flag"></i>{{ .Date.Format "January 2006" }}
+          </span>
         {{end}}
 
     </div>
