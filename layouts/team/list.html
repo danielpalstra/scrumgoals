@@ -1,0 +1,13 @@
+
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+<div class="container bootstrap snippet">
+    <section id="team" class="white-bg padding-top-bottom">
+		<div class="container bootstrap snippet">
+			<h1 class="section-title text-center page-title">Meet our team</h1>
+			<p class="section-description text-center">We are a small team with great skills. See the faces behind the lines of code. </p>
+      {{ range .Data.Pages.ByDate }}
+        {{ partial "member.html" . }}
+      {{ end }}
+		</div>
+	</section>
+</div>

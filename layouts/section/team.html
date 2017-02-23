@@ -1,0 +1,13 @@
+{{ partial "header.html" .}}
+<div class="content-wrapper">
+    <div class="container bootstrap snippet">
+        <section id="team" class="white-bg padding-top-bottom">
+            <div class="container bootstrap snippet">
+                <h1 class="section-title text-center page-title">Meet the team</h1>
+                <p class="section-description text-center">We are a small team with great skills. See the faces behind the lines of code. </p>
+                {{ range .Data.Pages.ByWeight }} {{ partial "member.html" . }} {{ end }}
+            </div>
+        </section>
+    </div>
+</div>
+{{ partial "footer.html" .}}
