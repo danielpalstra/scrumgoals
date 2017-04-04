@@ -9,10 +9,15 @@
     <div class="details">
       <p>{{ .Summary }}</p>
       <ul class="social-content">
-        <li><a href="mailto:mail@example.com"><i class="fa fa-envelope fa-fw"></i></a></li>
-        <li><a href="#link"><i class="fa fa-twitter fa-fw"></i></a></li>
-        <li><a href="#link"><i class="fa fa-facebook fa-fw"></i></a></li>
-        <li><a href="#link"><i class="fa fa-linkedin fa-fw"></i></a></li>
+        {{ if isset .Params "email" }}
+        <li><a href="mailto:{{ .Params.email }}"><i class="fa fa-envelope fa-fw"></i></a></li>
+        {{end}}
+        {{ if isset .Params "twitter" }}
+        <li><a href="{{ .Params.twitter }}" target="_blank"><i class="fa fa-twitter fa-fw"></i></a></li>
+        {{end}}
+        {{ if isset .Params "linkedin" }}
+        <li><a href="{{ .Params.linkedin }}" target="_blank"><i class="fa fa-linkedin fa-fw"></i></a></li>
+        {{end}}
       </ul>
     </div>
   </div>
