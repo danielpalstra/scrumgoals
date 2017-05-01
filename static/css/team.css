@@ -1,3 +1,28 @@
+/* Products*/
+
+.product-logo-helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#product-logo { 
+    height: 222px;
+    width: 350px;
+    display:block;
+    margin-top: 10px;
+    text-align: center;
+ }
+
+#product-logo img {
+    width: auto;
+    height: auto;
+    max-height: 222px;
+    max-width: 350px;
+}
+
+/* Team */
+
 div.circle-avatar{
   /* make it responsive */
   max-width: 80%;
