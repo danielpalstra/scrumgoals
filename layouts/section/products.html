@@ -1,23 +1,9 @@
-{{ partial "header.html" .}}
-
-<div class="content-wrapper">
-    <section class="content-header">
-        <h1>Product lines</h1>
-    </section>
-
-    <section class="content">
-        {{ range .Data.Pages.GroupByParam "productlines" }}
-        <h2>{{ .Key }}</h2>
-        <div class="row">
-            <div class="container bootstrap snippet">
-                <!--<section id="productline" class="white-bg">-->
-                    <!--<div class="row">-->
-                        {{ range .Pages }} {{ partial "product.html" . }} {{ end }}
-                    <!--</div>-->
-                <!--</section>-->
-            </div>
-        </div>
-        {{end}}
-    </section>
+<!-- Template to display list of products and product lines -->
+{{ partial "header.html" .}} {{ range .Data.Pages.GroupByParam "productlines" }}
+<h2>{{ .Key }}</h2>
+<div class="row">
+    <div class="container bootstrap snippet">
+        {{ range .Pages }} {{ partial "product.html" . }} {{ end }}
+    </div>
 </div>
- {{ partial "footer.html" .}}
+{{end}} {{ partial "footer.html" .}}

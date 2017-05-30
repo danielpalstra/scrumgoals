@@ -1,8 +1,6 @@
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
+<!-- Default list template that contains timeline events -->
   <section id="cd-timeline" class="cd-container">
     {{ range .Data.Pages.ByDate }}
     {{ partial "item.html" . }}
     {{ end }}
   </section>
-</div>
