@@ -21,7 +21,7 @@ h3 {
     vertical-align: middle;
 }
 
-#product-logo { 
+.product-logo { 
     /*height: 222px;
     width: 350px;*/
     height: 171px;
@@ -33,7 +33,7 @@ h3 {
     text-align: center;
  }
 
-#product-logo img {
+.product-logo img {
     width: auto;
     height: auto;
     /*max-height: 222px;

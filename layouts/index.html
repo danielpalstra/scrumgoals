@@ -1,5 +1,65 @@
 {{ partial "header.html" .}}
-{{ range where .Data.Pages.ByWeight "Section" "about" | first 1 }}
-    {{ partial "default_single.html" .}}
-{{ end }}    
+<div class="row">
+  <div class="col-md-3 col-sm-6 col-xs-12">
+    <div class="info-box">
+      <span class="info-box-icon bg-aqua"><i class="ion ion-map"></i></span>
+
+      <div class="info-box-content">
+        <span class="info-box-text">Roadmap Items</span>
+        <span class="info-box-number">{{ len (where .Data.Pages "Section" "roadmap") }}</span>
+      </div>
+      <!-- /.info-box-content -->
+    </div>
+    <!-- /.info-box -->
+  </div>
+  <!-- /.col -->
+  <div class="col-md-3 col-sm-6 col-xs-12">
+    <div class="info-box">
+      <span class="info-box-icon bg-red"><i class="ion ion-flag"></i></span>
+
+      <div class="info-box-content">
+        <span class="info-box-text">Sprint goals</span>
+        <span class="info-box-number">{{ len (where .Data.Pages "Section" "sprints") }}</span>
+      </div>
+      <!-- /.info-box-content -->
+    </div>
+    <!-- /.info-box -->
+  </div>
+  <!-- /.col -->
+
+  <!-- fix for small devices only -->
+  <div class="clearfix visible-sm-block"></div>
+
+  <div class="col-md-3 col-sm-6 col-xs-12">
+    <div class="info-box">
+      <span class="info-box-icon bg-green"><i class="ion ion-bag"></i></span>
+
+      <div class="info-box-content">
+        <span class="info-box-text">Products</span>
+        <span class="info-box-number">{{ len (where .Data.Pages "Section" "products") }}</span>
+      </div>
+      <!-- /.info-box-content -->
+    </div>
+    <!-- /.info-box -->
+  </div>
+  <!-- /.col -->
+  <div class="col-md-3 col-sm-6 col-xs-12">
+    <div class="info-box">
+      <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
+
+      <div class="info-box-content">
+        <span class="info-box-text">Team Members</span>
+        <span class="info-box-number">{{ len (where .Data.Pages "Section" "team") }}</span>
+      </div>
+      <!-- /.info-box-content -->
+    </div>
+    <!-- /.info-box -->
+  </div>
+  <!-- /.col -->
+</div>
+<div class="row">
+  <div class="col-md-12">
+  {{ range where .Data.Pages.ByWeight "Section" "about" | first 1 }} {{ partial "default_single.html" .}} {{ end }}
+  </div>
+</div>
 {{ partial "footer.html" .}}

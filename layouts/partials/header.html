@@ -71,7 +71,7 @@ desired effect
     </a>
 
     <!-- Header Navbar -->
-    <nav class="navbar navbar-static-top" role="navigation">
+    <nav class="navbar navbar-static-top">
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
         <span class="sr-only">Toggle navigation</span>
@@ -90,10 +90,8 @@ desired effect
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu tree">
         <li class="header">MAIN NAVIGATION</li>
-        <!-- Optionally, you can add icons to the links -->
-        <!--<li><a href="/"><i class="fa fa-link"></i> <span>Dashboard</span></a></li>-->
         <li class="active treeview menu-open">
-          <a href="#">
+          <a href="/">
             <i class="fa fa-home"></i> <span>About</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -119,13 +117,14 @@ desired effect
     </section>
     <!-- /.sidebar -->
   </aside>
+
 <div class="content-wrapper" style="min-height: 1126px;">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <!-- TODO: dirty hack for making breadcrumbs available -->
       <div style="min-height:20px;"></div>
     <ol class="breadcrumb">
-      <li><a href="#"><i class="fa fa-home"></i><a href="/{{ .Section }}"> {{ .Section }}</a></li>
+      <li><i class="fa fa-home"></i> <a href="/{{ .Section }}"> {{ .Section }}</a></li>
       <li class="active">{{ .Title }}</li>
     </ol>
     </section>
