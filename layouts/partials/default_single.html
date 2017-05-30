@@ -1,0 +1,31 @@
+<!-- Default single page template used by about, sprint goals etc -->
+<!-- Content Wrapper. Contains page content including header  -->
+<div class="content-wrapper row">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      {{ .Title }}
+      <small>{{ .Date.Format "2006-01-02" | safeHTML }}</small>
+    </h1>
+    <!-- Content breadcrumbs -->
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i><a href="/{{ .Section }}"> {{ .Section }}</a></li>
+      <li class="active">{{ .Title }}</li>
+    </ol>
+  </section>
+  <!-- Main content -->
+  <section class="content">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="box box-solid">
+          <div class="box-body">
+            {{ .Content }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

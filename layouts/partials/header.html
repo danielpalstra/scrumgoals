@@ -86,10 +86,23 @@ desired effect
     <section class="sidebar">
 
       <!-- Sidebar Menu -->
-      <ul class="sidebar-menu">
+      <ul class="sidebar-menu tree">
         <li class="header">MAIN NAVIGATION</li>
         <!-- Optionally, you can add icons to the links -->
-        <li><a href="/"><i class="fa fa-link"></i> <span>Dashboard</span></a></li>
+        <!--<li><a href="/"><i class="fa fa-link"></i> <span>Dashboard</span></a></li>-->
+        <li class="active treeview menu-open">
+          <a href="#">
+            <i class="fa fa-home"></i> <span>About</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            {{ range where $.Site.Pages "Section" "about" }}
+            <li><a href="{{ .Permalink }}"><i class="fa fa-circle-o"></i>{{ .Title }}</a></li>
+            {{end}}
+          </ul>
+        </li>
         <li><a href="/roadmap"><i class="fa fa-map"></i> <span>Roadmap</span></a></li>
 				<li><a href="/sprints"><i class="fa fa-check-circle"></i> <span>Sprint Goals</span></a></li>
         <li><a href="{{ .Site.Params.backlogurl }}" target="_blank"><i class="fa fa-list-ol"></i> <span>Backlog</span></a></li>

@@ -1,3 +1,5 @@
 {{ partial "header.html" .}}
-{{ partial "about.html" .}}
+{{ range where .Data.Pages.ByWeight "Section" "about" | first 1 }}
+    {{ partial "default_single.html" .}}
+{{ end }}    
 {{ partial "footer.html" .}}

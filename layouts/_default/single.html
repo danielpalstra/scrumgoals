@@ -1,22 +1,4 @@
+<!-- Default template for single page information used by roadmap, products etc --> 
 {{ partial "header.html" .}}
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-  <!-- Content Header (Page header) -->
-  <section class="content-header">
-    <h1>
-      {{ .Title }}
-      <small>{{ .Date.Format "2006-01-02" | safeHTML }}</small>
-    </h1>
-    <ol class="breadcrumb">
-      <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-      <li class="active">Here</li>
-    </ol>
-  </section>
-  <!-- Main content -->
-  <section class="content">
-    {{ .Content }}
-  </section>
-  <!-- /.content -->
-</div>
-<!-- /.content-wrapper -->
+{{ partial "default_single.html" . }}
 {{ partial "footer.html" .}}
