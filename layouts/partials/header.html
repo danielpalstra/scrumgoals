@@ -99,7 +99,7 @@ desired effect
           </a>
           <ul class="treeview-menu">
             {{ range where $.Site.Pages "Section" "about" }}
-            <li><a href="{{ .Permalink }}"><i class="fa fa-circle-o"></i>{{ .Title }}</a></li>
+            <li><a href="{{ .RelPermalink }}"><i class="fa fa-circle-o"></i>{{ .Title }}</a></li>
             {{end}}
           </ul>
         </li>
